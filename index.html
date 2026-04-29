@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Importa2</title>
+
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: 
+    linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)),
+    url("fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #f5f5f5;
+}
+
+h1, h2, h3 {
+  color: #d4af37;
+}
+
+.header {
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.subtitulo {
+  font-style: italic;
+  font-size: 4vw;
+  color: #d4af37;
+}
+
+.linea {
+  height: 2px;
+  background: linear-gradient(90deg, #d4af37, #ffffff);
+  margin: 10px 0 20px;
+}
+
+/* CATEGORIAS */
+.categorias {
+  text-align: center;
+}
+
+.categorias button {
+  background: transparent;
+  color: #d4af37;
+  border: 1px solid #d4af37;
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* GRID */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 10px;
+}
+
+/* PRODUCTO */
+.producto {
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.producto img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* ZOOM */
+.producto:hover img,
+.producto:active img {
+  transform: scale(1.25);
+}
+
+/* INFO */
+.info {
+  padding: 10px;
+}
+
+.precio {
+  color: gold;
+}
+
+/* BOTON */
+.btn {
+  display: block;
+  background: transparent;
+  color: #d4af37;
+  text-align: center;
+  padding: 8px;
+  border-radius: 10px;
+  margin-top: 8px;
+  text-decoration: none;
+  border: 1px solid #d4af37;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(212,175,55,0.6), transparent);
+  transform: skewX(-25deg);
+}
+
+.btn:hover::before {
+  left: 120%;
+  transition: 0.4s;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <img src="logo1.jpg" class="logo">
+  <h1>Importa2</h1>
+  <h2 class="subtitulo">No es lo que cuesta, es como te ves</h2>
+  <div class="linea"></div>
+</div>
+
+<!-- CATEGORIAS -->
+<div class="categorias">
+  <button onclick="filtrar('todos')">Todos</button>
+  <button onclick="filtrar('ellos')">Para ellos</button>
+  <button onclick="filtrar('ellas')">Para ellas</button>
+  <button onclick="filtrar('parejas')">Parejas</button>
+  <button onclick="filtrar('accesorios')">Accesorios</button>
+</div>
+
+<!-- PRODUCTOS -->
+<div class="productos">
+
+<!-- ELLOS -->
+<div class="producto ellos">
+  <img src="hublotblanco.jpg" data-imgs="hublotblanco.jpg,hublotnegro.jpg">
+  <div class="info">
+    <h3>Reloj Hublot</h3>
+    <div class="precio">$120.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
+  </div>
+</div>
+
+<div class="producto ellos">
+  <img src="dieselnegro.jpg" data-imgs="dieselnegro.jpg,dieselnegro2.jpg,dieselnegro3.jpg,dieselcafe.jpg">
+  <div class="info">
+    <h3>Reloj Diesel</h3>
+    <div class="precio">$95.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
+  </div>
+</div>
+
+<div class="producto ellos">
+  <img src="tissot1.jpg" data-imgs="tissot1.jpg,tissot2.jpg,tissot3.jpg,tissot4.jpg,tissot5.jpg,tissot6.jpg">
+  <div class="info">
+    <h3>Reloj Tissot</h3>
+    <div class="precio">$95.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
+  </div>
+</div>
+
+<!-- ELLAS -->
+<div class="producto ellas">
+  <img src="cjmarcas1.jpg" data-imgs="cjmarcas1.jpg,cjmarcas2.jpg,cjmarcas3.jpg,cjmarcas4.jpg,cjmarcas5.jpg">
+  <div class="info">
+    <h3>Conjunto Deportivo Dama</h3>
+    <div class="precio">$89.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
+  </div>
+</div>
+
+<div class="producto ellas">
+  <img src="calvin1.jpg" data-imgs="calvin1.jpg,calvin2.jpg,calvin3.jpg,calvin4.jpg">
+  <div class="info">
+    <h3>Reloj Dama CK</h3>
+    <div class="precio">$89.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
+  </div>
+</div>
+
+<div class="producto ellas">
+  <img src="tous1.jpg" data-imgs="tous1.jpg,tous2.jpg,tous3.jpg,tous4.jpg,tous5.jpg">
+  <div class="info">
+    <h3>Reloj Decorado Diamante</h3>
+    <div class="precio">$90.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
+  </div>
+</div>
+
+<div class="producto ellas">
+  <img src="lapizdepcejas1.jpg" data-imgs="lapizdepcejas1.jpg,lapizdepcejas2.jpg,lapizdepcejas3.jpg,lapizdepcejas4.jpg">
+  <div class="info">
+    <h3>Lapiz Depilador Recargable</h3>
+    <div class="precio">$90.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
+  </div>
+</div>
+
+<div class="producto ellas">
+  <img src="billeteramultimarca1.jpg" data-imgs="billeteramultimarca2.jpg,billeteramultimarca3.jpg,billeteramultimarca4.jpg">
+  <div class="info">
+    <h3>Billetera Dama</h3>
+  <h4>Diferentes modelos para toda ocasion</h4>
+    <div class="precio">$90.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
+  </div>
+</div>
+
+<!-- PAREJAS -->
+<div class="producto parejas">
+  <img src="fossilpareja1.jpg" data-imgs="fossilpareja1.jpg,fossilpareja2.jpg,fossilpareja3.jpg">
+  <div class="info">
+    <h3>Combo Pareja</h3>
+    <div class="precio">$150.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
+  </div>
+</div>
+
+<!-- ACCESORIOS -->
+<div class="producto accesorios">
+  <img src="minilavadora1.jpg" data-imgs="minilavadora1.jpg,minilavadora2.jpg">
+  <div class="info">
+    <h3>Mini Lavadora Portatil</h3>
+    <h4> Facil lavado con Cap 6.5 litros </h4>
+    <div class="precio">$95.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
+  </div>
+</div>
+
+<div class="producto accesorios">
+  <img src="nutriacalmante1.jpg" data-imgs="nutriacalmante1.jpg,nutriacalmante2.jpg,nutriacalmante3.jpg">
+  <div class="info">
+    <h3>Nutria Calmante</h3>
+    <h4> Sonido Respiracion Realista </h4>
+    <div class="precio">$65.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
+  </div>
+</div>
+
+</div>
+
+<script>
+
+/* FILTRO */
+function filtrar(cat) {
+  let productos = document.querySelectorAll('.producto');
+
+  productos.forEach(p => {
+    if (cat === 'todos' || p.classList.contains(cat)) {
+      p.style.display = 'block';
+    } else {
+      p.style.display = 'none';
+    }
+  });
+}
+
+/* CAMBIO AUTOMÁTICO + CLICK */
+document.querySelectorAll('.producto img').forEach(img => {
+
+  let lista = img.dataset.imgs.split(',').map(i => i.trim());
+  let index = 0;
+
+  // AUTO CAMBIO cada 3 seg
+  setInterval(() => {
+    index = (index + 1) % lista.length;
+    img.src = lista[index];
+  }, 3000);
+
+  // CAMBIO AL TOCAR
+  img.parentElement.addEventListener('click', () => {
+    index = (index + 1) % lista.length;
+    img.src = lista[index];
+  });
+
+});
+
+</script>
+
+</body>
+</html>
