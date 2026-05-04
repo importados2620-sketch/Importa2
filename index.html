@@ -722,16 +722,24 @@ function buscarProducto() {
       p.style.display = "none";
     }
   });
-  
   document.querySelectorAll('.producto .btn').forEach(btn => {
   btn.addEventListener('click', function(e) {
     e.preventDefault();
 
     let producto = this.closest('.producto');
-    let nombre = producto.querySelector('h3').innerText;
-    let precio = producto.querySelector('.precio').innerText;
 
-    let mensaje = `Hola 👋, quiero este producto:\n\n🛍 ${nombre}\n💰 ${precio}`;
+    let nombre = producto.querySelector('h3')?.innerText || 'Producto';
+    let precio = producto.querySelector('.precio')?.innerText || '';
+    let img = producto.querySelector('img')?.src || '';
+
+    let mensaje = `Hola 👋, quiero este producto:
+
+🛍 ${nombre}
+💰 ${precio}
+📸 ${img}
+
+¿Está disponible?`;
+
     let url = `https://wa.me/573204518500?text=${encodeURIComponent(mensaje)}`;
 
     window.open(url, '_blank');
