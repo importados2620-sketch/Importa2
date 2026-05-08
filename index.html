@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Importa2</title>
-<style>
 
-* { box-sizing: border-box; }
+<style>
 
 body {
   margin: 0;
@@ -24,7 +23,6 @@ h1, h2, h3 {
   color: #d4af37;
 }
 
-/* ── HEADER ── */
 .header {
   padding: 20px;
   text-align: center;
@@ -37,157 +35,32 @@ h1, h2, h3 {
 
 .subtitulo {
   font-style: italic;
-  font-size: clamp(14px, 4vw, 22px);
+  font-size: 4vw;
   color: #d4af37;
 }
 
 .linea {
   height: 4px;
-  background: linear-gradient(90deg, #009246, #ffffff, #CE2B37);
+  background: linear-gradient(90deg,#009246, #ffffff, #CE2B37);
   margin: 10px 0 20px;
 }
 
-/* ── BUSCADOR ── */
-.buscador-wrap {
-  text-align: center;
-  margin: 15px;
-}
-
-.buscador-wrap input {
-  width: 80%;
-  padding: 12px 20px;
-  border-radius: 45px;
-  border: 1px solid rgba(212,175,55,0.4);
-  outline: none;
-  font-size: 16px;
-  color: #f5f5f5;
-  background: linear-gradient(
-    90deg,
-    rgba(0,146,70,0.4),
-    rgba(255,255,255,0.04),
-    rgba(206,43,55,0.4)
-  );
-  backdrop-filter: blur(6px);
-}
-
-.buscador-wrap input::placeholder {
-  color: #d4af37;
-}
-
-/* ── CÓMO COMPRAR ── */
-.como-comprar {
-  text-align: center;
-  padding: 20px 16px;
-}
-
-.como-comprar h2 {
-  color: #d4af37;
-  margin-bottom: 14px;
-  font-size: 18px;
-}
-
-.pasos {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: nowrap;
-}
-
-.paso {
-  background: rgba(0,0,0,0.55);
-  border-radius: 12px;
-  padding: 10px 8px;
-  border: 1px solid rgba(212,175,55,0.25);
-  backdrop-filter: blur(2px);
-  transition: transform 0.3s;
-  flex: 1;
-  max-width: 120px;
-}
-
-.paso:hover {
-  transform: translateY(-4px);
-}
-
-.numero {
-  width: 34px;
-  height: 34px;
-  margin: 0 auto 8px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 14px;
-  color: black;
-  background: linear-gradient(90deg, #009246, #ffffff, #CE2B37);
-}
-
-.paso h3 {
-  color: #d4af37;
-  margin: 6px 0 4px;
-  font-size: 13px;
-}
-
-.paso p {
-  font-size: 11px;
-  color: #ccc;
-  margin: 0;
-  line-height: 1.4;
-}
-
-.frase {
-  margin-top: 14px;
-  font-style: italic;
-  font-size: 13px;
-  color: #d4af37;
-}
-
-/* ── CATEGORÍAS ── */
+/* CATEGORIAS */
 .categorias {
-  padding: 10px 12px 6px;
-}
-
-.categorias-titulo {
   text-align: center;
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(212,175,55,0.6);
-  margin-bottom: 8px;
-}
-
-.cat-grupo {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px;
-  margin-bottom: 6px;
-}
-
-.cat-grupo.secundario {
-  border-top: 1px solid rgba(212,175,55,0.15);
-  padding-top: 6px;
 }
 
 .categorias button {
   background: transparent;
   color: #d4af37;
-  border: 1px solid rgba(212,175,55,0.5);
-  padding: 5px 13px;
+  border: 1px solid #d4af37;
+  padding: 6px 12px;
+  margin: 5px;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 13px;
-  transition: all 0.25s;
-  white-space: nowrap;
 }
 
-.categorias button:hover,
-.categorias button.activo {
-  background: #d4af37;
-  color: #000;
-}
-
-/* ── GRID PRODUCTOS ── */
+/* GRID */
 .productos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -195,7 +68,7 @@ h1, h2, h3 {
   padding: 10px;
 }
 
-/* ── TARJETA PRODUCTO ── */
+/* PRODUCTO */
 .producto {
   background: #111;
   border-radius: 18px;
@@ -204,65 +77,61 @@ h1, h2, h3 {
   border: 1px solid rgba(212,175,55,0.15);
 }
 
+/* HOVER SUAVE */
 .producto:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
+/* IMAGEN LIMPIA */
 .producto img {
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
-  display: block;
   transition: transform 0.4s ease;
 }
 
+/* ZOOM */
 .producto:hover img {
-  transform: scale(1.08);
+  transform: scale(1.18);
 }
 
+/* INFO ABAJO NORMAL (NO ENCIMA) */
 .info {
-  padding: 10px 12px 12px;
+  padding: 12px;
   background: #111;
   border-top: 1px solid rgba(212,175,55,0.2);
 }
 
+/* TITULO */
 .info h3 {
-  margin: 0 0 2px;
-  font-size: 14px;
+  margin: 0;
+  font-size: 15px;
   color: #d4af37;
 }
 
-.info h4 {
-  margin: 0 0 4px;
-  font-size: 11px;
-  font-weight: normal;
-  color: #aaa;
-}
-
+/* PRECIO */
 .precio {
   font-size: 14px;
-  font-weight: bold;
+  margin-top: 4px;
   color: #d4af37;
-  margin-bottom: 2px;
 }
 
-/* ── BOTÓN ── */
+/* BOTON MÁS PRO */
 .btn {
   display: block;
-  position: relative;
-  overflow: hidden;
   text-align: center;
   padding: 8px;
-  margin-top: 8px;
+  margin-top: 10px;
   border-radius: 10px;
   border: 1px solid #d4af37;
   color: #d4af37;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 14px;
   transition: all 0.3s ease;
 }
 
+/* EFECTO BOTON */
 .btn:hover {
   background: #d4af37;
   color: black;
@@ -275,22 +144,24 @@ h1, h2, h3 {
   left: -75%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(212,175,55,0.5), transparent);
+  background: linear-gradient(120deg, transparent, rgba(212,175,55,0.6), transparent);
   transform: skewX(-25deg);
-  transition: left 0.4s;
 }
 
 .btn:hover::before {
   left: 120%;
+  transition: 0.4s;
 }
 
-/* ── VISOR ── */
+/* VISOR */
 .visor {
   display: none;
   position: fixed;
   z-index: 9999;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0,0,0,0.95);
   justify-content: center;
   align-items: center;
@@ -304,293 +175,555 @@ h1, h2, h3 {
 
 .cerrar {
   position: absolute;
-  top: 16px; right: 24px;
-  font-size: 38px;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
   color: white;
   cursor: pointer;
-  line-height: 1;
+}
+
+.buscador {
+  text-align: center;
+  margin: 15px;
+}
+.buscador {
+  width: 80%;
+  padding: 12px;
+  border-radius: 45px;
+  border: none;
+  outline: none;
+  color: none;
+  font-size: 16px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0,146,70,0.4),
+    rgba(255,255,255,0.02),
+    rgba(206,43,55,0.4)
+  );
+
+  backdrop-filter: blur(6px);
+}
+
+.buscador input::placeholder {
+  color: #d4af37;
 }
 
 .nav {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  font-size: 38px;
+  font-size: 40px;
   color: white;
   cursor: pointer;
   padding: 10px;
-  user-select: none;
+  transform: translateY(-50%);
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+/* COMO COMPRAR */
+.como-comprar {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.como-comprar h2 {
+  color: #d4af37;
+  margin-bottom: 30px;
+}
+
+/* CONTENEDOR */
+.pasos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/* TARJETA */
+.paso {
+  background: rgba(0,0,0,0.6);
+  border-radius: 4px;
+  padding: 6px;
+  border: 1px solid rgba(212,175,55,0.2);
+  backdrop-filter: blur(2px);
+  transition: 0.3s;
+}
+
+.paso:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 50px 10px rgba(0,0,0,0.6);
+}
+
+/* NUMERO CON COLORES ITALIA */
+.numero {
+  width: 45px;
+  height: 45px;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: black;
+  background: linear-gradient(90deg, #009246, #ffffff, #CE2B37);
+  margin-bottom: 10px;
+}
+
+/* TITULO */
+.paso h3 {
+  color: #d4af37;
+  margin: 10px 0;
+}
+
+/* TEXTO */
+.paso p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* FRASE FINAL */
+.frase {
+  margin-top: 25px;
+  font-style: italic;
+  color: #d4af37;
+
+}
 
 </style>
 </head>
-<body>
 
-<!-- VISOR -->
-<div class="visor" id="visor">
-  <span class="cerrar" onclick="cerrarVisor()">&times;</span>
-  <span class="nav prev" onclick="cambiarVisor(-1)">&#10094;</span>
-  <img id="imgGrande"/>
-  <span class="nav next" onclick="cambiarVisor(1)">&#10095;</span>
+<body>
+<div id="visor" class="visor">
+  <span class="cerrar">&times;</span>
+  <img id="imgGrande">
 </div>
 
-<!-- HEADER -->
+<div id="visor" class="visor">
+  <span class="cerrar">&times;</span>
+  <span class="nav prev">&#10094;</span>
+  <img id="imgGrande">
+  <span class="nav next">&#10095;</span>
+</div>
+
 <div class="header">
-  <img alt="Logo Importa2" class="logo" src="logo1.jpg"/>
+  <img src="logo1.jpg" class="logo">
   <h1>Importa2</h1>
   <h2 class="subtitulo">No es lo que cuesta, es como te ves</h2>
   <div class="linea"></div>
-  <div class="buscador-wrap">
-    <input id="buscar" oninput="buscarProducto()" placeholder="Buscar producto..." type="text"/>
-  </div>
+  
+  <div class="buscador">
+  <input type="text" id="buscar" placeholder="Buscar producto..." onkeyup="buscarProducto()">
+</div>
 </div>
 
-<!-- CÓMO COMPRAR -->
+<!-- COMO COMPRAR -->
 <div class="como-comprar">
   <h2>¿Cómo comprar?</h2>
+
   <div class="pasos">
+
     <div class="paso">
       <div class="numero">1</div>
       <h3>Explora</h3>
-      <p>Elige el producto que más te guste.</p>
+      <p>Descubre nuestros productos y elige el que más te guste.</p>
     </div>
+
     <div class="paso">
       <div class="numero">2</div>
       <h3>Escríbenos</h3>
       <p>Presiona "Comprar" y contáctanos por WhatsApp.</p>
     </div>
+
     <div class="paso">
       <div class="numero">3</div>
       <h3>Paga fácil</h3>
-      <p>Pago seguro a través de Nequi.</p>
+      <p>Realiza tu pago seguro a través de Nequi.</p>
     </div>
+
   </div>
+
   <p class="frase">Compra fácil, rápido y seguro.</p>
 </div>
 
-<!-- CATEGORÍAS -->
+<!-- CATEGORIAS -->
 <div class="categorias">
-  <p class="categorias-titulo">Categorías</p>
-  <div class="cat-grupo">
-    <button class="activo" onclick="filtrar('todos', this)">Todos</button>
-    <button onclick="filtrar('ellos', this)">Para ellos</button>
-    <button onclick="filtrar('ellas', this)">Para ellas</button>
-    <button onclick="filtrar('parejas', this)">Parejas</button>
-    <button onclick="filtrar('accesorios', this)">Accesorios</button>
-  </div>
-  <div class="cat-grupo secundario">
-    <button onclick="filtrar('infantil', this)">Infantil</button>
-    <button onclick="filtrar('salud', this)">Salud</button>
-    <button onclick="filtrar('lociones-dama', this)">Lociones Dama</button>
-    <button onclick="filtrar('lociones-caballero', this)">Lociones Caballero</button>
-  </div>
+  <button onclick="filtrar('todos')">Todos</button>
+  <button onclick="filtrar('ellos')">Para ellos</button>
+  <button onclick="filtrar('ellas')">Para ellas</button>
+  <button onclick="filtrar('parejas')">Parejas</button>
+  <button onclick="filtrar('accesorios')">Accesorios</button>
+  <button onclick="filtrar('infantil')">infantil</button>
+  <button onclick="filtrar('salud')">Salud</button>
+  <button onclick="filtrar('Lociones Dama')">Lociones Dama</button>
+  <button onclick="filtrar('Lociones Caballero')">Lociones Caballero</button>
 </div>
 
 <!-- PRODUCTOS -->
 <div class="productos">
 
-  <!-- ELLOS -->
-  <div class="producto ellos">
-    <img data-imgs="hublotblanco.jpg,hublotnegro.jpg" src="hublotblanco.jpg"/>
-    <div class="info">
-      <h3>Reloj Hublot</h3>
-      <div class="precio">$120.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Reloj%20Hublot%0A%F0%9F%92%B0%20%24120.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/hublotblanco.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<!-- ELLOS -->
+<div class="producto ellos" data-precio="120000" data-vendidos="5">
+  <img src="hublotblanco.jpg" data-imgs="hublotblanco.jpg,hublotnegro.jpg">
+  <div class="info">
+    <h3>Reloj Hublot</h3>
+    <div class="precio">$120.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <div class="producto ellos">
-    <img data-imgs="dieselnegro.jpg,dieselnegro2.jpg,dieselnegro3.jpg,dieselcafe.jpg" src="dieselnegro.jpg"/>
-    <div class="info">
-      <h3>Reloj Diesel</h3>
-      <div class="precio">$95.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Reloj%20Diesel%0A%F0%9F%92%B0%20%2495.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/dieselnegro.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<div class="producto ellos">
+  <img src="dieselnegro.jpg" data-imgs="dieselnegro.jpg,dieselnegro2.jpg,dieselnegro3.jpg,dieselcafe.jpg">
+  <div class="info">
+    <h3>Reloj Diesel</h3>
+    <div class="precio">$95.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <div class="producto ellos">
-    <img data-imgs="tissot1.jpg,tissot2.jpg,tissot3.jpg,tissot4.jpg,tissot5.jpg,tissot6.jpg" src="tissot1.jpg"/>
-    <div class="info">
-      <h3>Reloj Tissot</h3>
-      <div class="precio">$95.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Reloj%20Tissot%0A%F0%9F%92%B0%20%2495.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/tissot1.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<div class="producto ellos">
+  <img src="tissot1.jpg" data-imgs="tissot1.jpg,tissot2.jpg,tissot3.jpg,tissot4.jpg,tissot5.jpg,tissot6.jpg">
+  <div class="info">
+    <h3>Reloj Tissot</h3>
+    <div class="precio">$95.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <div class="producto ellos">
-    <img data-imgs="orient1.jpg,orient2.jpg,orient3.jpg,orient4.jpg,orient5.jpg" src="orient1.jpg"/>
-    <div class="info">
-      <h3>Reloj Orient</h3>
-      <h4>Hora Análoga, Doble calendario funcional y pulso en cuero</h4>
-      <div class="precio">$95.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Reloj%20Orient%0A%F0%9F%92%B0%20%2495.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/orient1.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<div class="producto ellos">
+  <img src="orient1.jpg" data-imgs="orient1.jpg,orient2.jpg,orient3.jpg,orient4.jpg,orient5.jpg">
+  <div class="info">
+    <h3>Reloj Orient</h3>
+    <h4>Hora Análoga, Doble calendario funcional y pulso en cuero</h4>
+    <div class="precio">$95.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <div class="producto ellos">
-    <img data-imgs="curren1.jpg,curren2.jpg,curren3.jpg" src="curren1.jpg"/>
-    <div class="info">
-      <h3>Reloj Curren Original</h3>
-      <h4>Hora Análoga, calendario funcional y pulso en Acero</h4>
-      <div class="precio">$175.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Reloj%20Curren%20Original%0A%F0%9F%92%B0%20%24175.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/curren1.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<div class="producto ellos">
+  <img src="curren1.jpg" data-imgs="curren1.jpg,curren2.jpg,curren3.jpg">
+  <div class="info">
+    <h3>Reloj Curren Original</h3>
+    <h4>Hora Análoga, calendario funcional y pulso en Acero</h4>
+    <div class="precio">$175.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <div class="producto ellos">
-    <img data-imgs="tommy1.jpg,tommy2.jpg,tommy3.jpg" src="tommy1.jpg"/>
-    <div class="info">
-      <h3>Maletin Tommy Mediano</h3>
-      <h4>Diseño Moderno ideal para Viajes y el Gym</h4>
-      <div class="precio">$115.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Maletin%20Tommy%20Mediano%0A%F0%9F%92%B0%20%24115.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/tommy1.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<div class="producto ellos">
+  <img src="bvlgari1.jpg" data-imgs="bvlgari1.jpg,bvlgari2.jpg">
+  <div class="info">
+    <h3>Reloj Bvlgari Original</h3>
+    <h4>Hora Análoga, calendario funcional y pulso en Acero</h4>
+    <div class="precio">$95.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <div class="producto ellos">
-    <img data-imgs="bvlgari1.jpg,bvlgari2.jpg" src="bvlgari1.jpg"/>
-    <div class="info">
-      <h3>Reloj Bvlgari Original</h3>
-      <h4>Hora Análoga, calendario funcional y pulso en Acero</h4>
-      <div class="precio">$95.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Reloj%20Bvlgari%20Original%0A%F0%9F%92%B0%20%2495.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/bvlgari1.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<div class="producto ellos">
+  <img src="gafaprada1.jpg" data-imgs="gafaprada1.jpg,gafaprada2.jpg,gafaprada3.jpg,gafaprada4.jpg,gafaprada5.jpg,gafaprada6.jpg">
+  <div class="info">
+    <h3>Gafas de Sol Prada</h3>
+    <h4>Filtro UV-400</h4>
+    <div class="precio">$80.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <div class="producto ellos">
-    <img data-imgs="gafaprada1.jpg,gafaprada2.jpg,gafaprada3.jpg,gafaprada4.jpg,gafaprada5.jpg,gafaprada6.jpg" src="gafaprada1.jpg"/>
-    <div class="info">
-      <h3>Gafas de Sol Prada</h3>
-      <h4>Filtro UV-400</h4>
-      <div class="precio">$80.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Gafas%20de%20Sol%20Prada%0A%F0%9F%92%B0%20%2480.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/gafaprada1.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<div class="producto ellos">
+  <img src="dieselacero1.jpg" data-imgs="dieselacero1.jpg,dieselacero2.jpg,dieselacero3.jpg,dieselacero4.jpg,dieselacero5.jpg,dieselacero6.jpg,dieselacero7.jpg,dieselacero8.jpg">
+  <div class="info">
+    <h3>Diesel Acero TDT</h3>
+    <h4>Hora Análoga y Digital</h4>
+    <div class="precio">$95.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <div class="producto ellos">
-    <img data-imgs="dieselacero1.jpg,dieselacero2.jpg,dieselacero3.jpg,dieselacero4.jpg,dieselacero5.jpg,dieselacero6.jpg,dieselacero7.jpg,dieselacero8.jpg" src="dieselacero1.jpg"/>
-    <div class="info">
-      <h3>Diesel Acero TDT</h3>
-      <h4>Hora Análoga y Digital</h4>
-      <div class="precio">$95.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Diesel%20Acero%20TDT%0A%F0%9F%92%B0%20%2495.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/dieselacero1.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<div class="producto ellos">
+  <img src="gafaversace1.jpg" data-imgs="gafaversace1.jpg,gafaversace2.jpg,gafaversace3.jpg,gafaversace4.jpg,gafaversace5.jpg,gafaversace6.jpg,gafaversace7.jpg,gafaversace8.jpg,gafaversace9.jpg">
+  <div class="info">
+    <h3>Gafas Deportivas</h3>
+    <h4>Filtro de Sol y UV-400</h4>
+    <div class="precio">$70.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <div class="producto ellos">
-    <img data-imgs="gafaversace1.jpg,gafaversace2.jpg,gafaversace3.jpg,gafaversace4.jpg,gafaversace5.jpg,gafaversace6.jpg,gafaversace7.jpg,gafaversace8.jpg,gafaversace9.jpg" src="gafaversace1.jpg"/>
-    <div class="info">
-      <h3>Gafas Deportivas</h3>
-      <h4>Filtro de Sol y UV-400</h4>
-      <div class="precio">$70.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Gafas%20Deportivas%0A%F0%9F%92%B0%20%2470.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/gafaversace1.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<!-- ELLAS -->
+<div class="producto ellas">
+  <img src="cjmarcas1.jpg" data-imgs="cjmarcas1.jpg,cjmarcas2.jpg,cjmarcas3.jpg,cjmarcas4.jpg,cjmarcas5.jpg">
+  <div class="info">
+    <h3>Conjunto Deportivo Dama</h3>
+    <div class="precio">$89.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <div class="producto ellos">
-    <img data-imgs="tissotcuero1.jpg,tissotcuero2.jpg,tissotcuero3.jpg,tissotcuero4.jpg,tissotcuero5.jpg" src="tissotcuero1.jpg"/>
-    <div class="info">
-      <h3>Tissot En Cuero Tart</h3>
-      <h4>Reloj Tissot pulso en Cuero y Calendario Funcional</h4>
-      <div class="precio">$95.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Tissot%20En%20Cuero%20Tart%0A%F0%9F%92%B0%20%2495.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/tissotcuero1.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<div class="producto ellas">
+  <img src="calvin1.jpg" data-imgs="calvin1.jpg,calvin2.jpg,calvin3.jpg,calvin4.jpg">
+  <div class="info">
+    <h3>Reloj Dama CK</h3>
+    <div class="precio">$89.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <!-- ELLAS -->
-  <div class="producto ellas">
-    <img data-imgs="cjmarcas1.jpg,cjmarcas2.jpg,cjmarcas3.jpg,cjmarcas4.jpg,cjmarcas5.jpg" src="cjmarcas1.jpg"/>
-    <div class="info">
-      <h3>Conjunto Deportivo Dama</h3>
-      <div class="precio">$89.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Conjunto%20Deportivo%20Dama%0A%F0%9F%92%B0%20%2489.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/cjmarcas1.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<div class="producto ellas">
+  <img src="tous1.jpg" data-imgs="tous1.jpg,tous2.jpg,tous3.jpg,tous4.jpg,tous5.jpg">
+  <div class="info">
+    <h3>Reloj Decorado Diamante</h3>
+    <div class="precio">$90.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <div class="producto ellas">
-    <img data-imgs="calvin1.jpg,calvin2.jpg,calvin3.jpg,calvin4.jpg" src="calvin1.jpg"/>
-    <div class="info">
-      <h3>Reloj Dama CK</h3>
-      <div class="precio">$89.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Reloj%20Dama%20CK%0A%F0%9F%92%B0%20%2489.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/calvin1.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<div class="producto ellas">
+  <img src="lapizdepcejas1.jpg" data-imgs="lapizdepcejas1.jpg,lapizdepcejas2.jpg,lapizdepcejas3.jpg,lapizdepcejas4.jpg">
+  <div class="info">
+    <h3>Lapiz Depilador Recargable</h3>
+    <div class="precio">$90.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <div class="producto ellas">
-    <img data-imgs="tous1.jpg,tous2.jpg,tous3.jpg,tous4.jpg,tous5.jpg" src="tous1.jpg"/>
-    <div class="info">
-      <h3>Reloj Decorado Diamante</h3>
-      <div class="precio">$90.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Reloj%20Decorado%20Diamante%0A%F0%9F%92%B0%20%2490.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/tous1.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<div class="producto ellas">
+  <img src="billeteramultimarca1.jpg" data-imgs="billeteramultimarca2.jpg,billeteramultimarca3.jpg,billeteramultimarca4.jpg">
+  <div class="info">
+    <h3>Billetera Dama</h3>
+  <h4>Diferentes modelos para toda ocasion</h4>
+    <div class="precio">$90.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <div class="producto ellas">
-    <img data-imgs="lapizdepcejas1.jpg,lapizdepcejas2.jpg,lapizdepcejas3.jpg,lapizdepcejas4.jpg" src="lapizdepcejas1.jpg"/>
-    <div class="info">
-      <h3>Lapiz Depilador Recargable</h3>
-      <div class="precio">$90.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Lapiz%20Depilador%20Recargable%0A%F0%9F%92%B0%20%2490.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/lapizdepcejas1.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<div class="producto ellas">
+  <img src="alovestido1.jpg" data-imgs="alovestido1.jpg,alovestido2.jpg,alovestido3.jpg,alovestido4.jpg,alovestido5.jpg">
+  <div class="info">
+    <h3>Vestido Deportivo Dama</h3>
+  <h4>Tela power+licra por debajo</h4>
+    <div class="precio">$65.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <div class="producto ellas">
-    <img data-imgs="billeteramultimarca2.jpg,billeteramultimarca3.jpg,billeteramultimarca4.jpg" src="billeteramultimarca1.jpg"/>
-    <div class="info">
-      <h3>Billetera Dama</h3>
-      <h4>Diferentes modelos para toda ocasión</h4>
-      <div class="precio">$90.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Billetera%20Dama%0A%F0%9F%92%B0%20%2490.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/billeteramultimarca2.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<div class="producto ellas">
+  <img src="planchapelo1.jpg" data-imgs="planchapelo1.jpg,planchapelo2.jpg">
+  <div class="info">
+    <h3>Plancha Prlo Digital</h3>
+  <h4>Placa Recubierta Triple Infusion Argan</h4>
+    <div class="precio">$90.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <div class="producto ellas">
-    <img data-imgs="alovestido1.jpg,alovestido2.jpg,alovestido3.jpg,alovestido4.jpg,alovestido5.jpg" src="alovestido1.jpg"/>
-    <div class="info">
-      <h3>Vestido Deportivo Dama</h3>
-      <h4>Tela power + licra por debajo</h4>
-      <div class="precio">$65.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Vestido%20Deportivo%20Dama%0A%F0%9F%92%B0%20%2465.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/alovestido1.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<div class="producto ellas">
+  <img src="relojadidas1.jpg" data-imgs="relojadidas1.jpg,relojadidas2.jpg,relojadidas3.jpg,relojadidas4.jpg,relojadidas5.jpg">
+  <div class="info">
+    <h3>Reloj Deportivo Adidas</h3>
+  <h4>Pulso en Silicona Alta Resistencia</h4>
+    <div class="precio">$70.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <div class="producto ellas">
-    <img data-imgs="planchapelo1.jpg,planchapelo2.jpg" src="planchapelo1.jpg"/>
-    <div class="info">
-      <h3>Plancha Prlo Digital</h3>
-      <h4>Placa Recubierta Triple Infusion Argan</h4>
-      <div class="precio">$90.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Plancha%20Prlo%20Digital%0A%F0%9F%92%B0%20%2490.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/planchapelo1.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<div class="producto ellas">
+  <img src="tissotd1.jpg" data-imgs="tissotd1.jpg,tissotd2.jpg,tissotd3.jpg">
+  <div class="info">
+    <h3>Reloj Tissot Dama TDD</h3>
+  <h4>Pulso en Silicona Alta Resistencia</h4>
+    <div class="precio">$95.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <div class="producto ellas">
-    <img data-imgs="relojadidas1.jpg,relojadidas2.jpg,relojadidas3.jpg,relojadidas4.jpg,relojadidas5.jpg" src="relojadidas1.jpg"/>
-    <div class="info">
-      <h3>Reloj Deportivo Adidas</h3>
-      <h4>Pulso en Silicona Alta Resistencia</h4>
-      <div class="precio">$70.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Reloj%20Deportivo%20Adidas%0A%F0%9F%92%B0%20%2470.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/relojadidas1.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<!-- PAREJAS -->
+<div class="producto parejas">
+  <img src="fossilpareja1.jpg" data-imgs="fossilpareja1.jpg,fossilpareja2.jpg,fossilpareja3.jpg">
+  <div class="info">
+    <h3>Combo Pareja</h3>
+    <div class="precio">$150.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <div class="producto ellas">
-    <img data-imgs="tissotd1.jpg,tissotd2.jpg,tissotd3.jpg" src="tissotd1.jpg"/>
-    <div class="info">
-      <h3>Reloj Tissot Dama TDD</h3>
-      <h4>Pulso en Silicona Alta Resistencia</h4>
-      <div class="precio">$95.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9F%91%8B%2C%20quiero%20este%20producto%3A%0A%0A%F0%9F%9B%8D%20Reloj%20Tissot%20Dama%20TDD%0A%F0%9F%92%B0%20%2495.000%0A%F0%9F%93%B8%20https%3A//importados2620-sketch.github.io/Importa2/tissotd1.jpg%0A%0A%C2%BFEst%C3%A1%20disponible%3F">Comprar</a>
-    </div>
+<!-- ACCESORIOS -->
+<div class="producto accesorios">
+  <img src="minilavadora1.jpg" data-imgs="minilavadora1.jpg,minilavadora2.jpg">
+  <div class="info">
+    <h3>Mini Lavadora Portatil</h3>
+    <h4> Facil lavado con Cap 6.5 litros </h4>
+    <div class="precio">$95.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
   </div>
+</div>
 
-  <!-- PAREJAS -->
-  <div class="producto parejas">
-    <img data-imgs="fossilpareja1.jpg,fossilpareja2.jpg,fossilpareja3.jpg" src="fossilpareja1.jpg"/>
-    <div class="info">
-      <h3>Combo Pareja</h3>
-      <div class="precio">$150.000</div>
-      <a class="btn" href="https://wa.me/573204518500?text=Hola%20%F0%9
+<div class="producto accesorios">
+  <img src="nutriacalmante1.jpg" data-imgs="nutriacalmante1.jpg,nutriacalmante2.jpg,nutriacalmante3.jpg">
+  <div class="info">
+    <h3>Nutria Calmante</h3>
+    <h4> Sonido Respiracion Realista </h4>
+    <div class="precio">$65.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
+  </div>
+</div>
+
+<div class="producto accesorios">
+  <img src="limpiaoidos1.jpg" data-imgs="limpiaoidos2.jpg,limpiaoidos3.jpg">
+  <div class="info">
+    <h3>Limpiador De Oidos + Cámara</h3>
+    <h4> cámara wifi, compatible con app para android y iphone </h4>
+    <div class="precio">$60.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
+  </div>
+</div>
+
+<div class="producto salud">
+  <img src="cafe1.jpg" data-imgs="cafe1.jpg,cafe2.jpg,cafe3.jpg">
+  <div class="info">
+    <h3>Cafe Premium 500gr</h3>
+    <h4> Ideal para preparar en metodos de especialidad, tostion media tipo exportación, en Grano o molido</h4>
+    <div class="precio">$50.000</div>
+    <a href="https://wa.me/573204518500?text=Hola quiero este producto" class="btn">Comprar</a>
+  </div>
+</div>
+</div>
+
+<script>
+
+let categoriaActiva = 'todos';
+let ordenActivo = null;
+
+/* FILTRO */
+function filtrar(cat) {
+  let productos = document.querySelectorAll('.producto');
+
+  productos.forEach(p => {
+    if (cat === 'todos' || p.classList.contains(cat)) {
+      p.style.display = 'block';
+    } else {
+      p.style.display = 'none';
+    }
+  });
+}
+
+/* CAMBIO AUTOMÁTICO + CLICK */
+document.querySelectorAll('.producto img').forEach(img => {
+
+  let lista = img.dataset.imgs.split(',').map(i => i.trim());
+  let index = 0;
+
+  // AUTO CAMBIO cada 3 seg
+  setInterval(() => {
+    index = (index + 1) % lista.length;
+    img.src = lista[index];
+  }, 3000);
+
+  // CAMBIO AL TOCAR
+  img.parentElement.addEventListener('click', () => {
+    index = (index + 1) % lista.length;
+    img.src = lista[index];
+  });
+});
+
+/* VISOR PRO */
+let visor = document.getElementById("visor");
+let imgGrande = document.getElementById("imgGrande");
+let cerrar = document.querySelector(".cerrar");
+let next = document.querySelector(".next");
+let prev = document.querySelector(".prev");
+
+let listaActual = [];
+let indexActual = 0;
+
+document.querySelectorAll('.producto img').forEach(img => {
+  img.addEventListener('click', (e) => {
+    e.stopPropagation();
+
+    listaActual = img.dataset.imgs.split(',').map(i => i.trim());
+
+    let actual = img.src.split('/').pop();
+    indexActual = listaActual.indexOf(actual);
+    if(indexActual === -1) indexActual = 0;
+
+    imgGrande.src = listaActual[indexActual];
+    visor.style.display = "flex";
+  });
+});
+
+next.onclick = () => {
+  indexActual = (indexActual + 1) % listaActual.length;
+  imgGrande.src = listaActual[indexActual];
+};
+
+prev.onclick = () => {
+  indexActual = (indexActual - 1 + listaActual.length) % listaActual.length;
+  imgGrande.src = listaActual[indexActual];
+};
+
+cerrar.onclick = () => visor.style.display = "none";
+
+visor.onclick = (e) => {
+  if (e.target === visor) visor.style.display = "none";
+};
+
+let listaGlobal = [];
+let indexGlobal = 0;
+
+// ABRIR VISOR CON TODAS LAS IMÁGENES
+document.querySelectorAll('.producto img').forEach(img => {
+
+  img.addEventListener('click', (e) => {
+    e.stopPropagation();
+
+    listaGlobal = img.dataset.imgs.split(',').map(i => i.trim());
+    indexGlobal = 0;
+
+    document.getElementById('visor').style.display = 'flex';
+    document.getElementById('imgGrande').src = listaGlobal[indexGlobal];
+  });
+
+});
+
+// CAMBIAR IMAGEN EN VISOR (CLICK)
+document.getElementById('imgGrande').addEventListener('click', () => {
+  indexGlobal = (indexGlobal + 1) % listaGlobal.length;
+  document.getElementById('imgGrande').src = listaGlobal[indexGlobal];
+});
+
+function ordenar(tipo) {
+  let contenedor = document.querySelector('.productos');
+  let productos = Array.from(contenedor.children);
+
+  productos.sort((a, b) => {
+
+    let precioA = parseInt(a.dataset.precio);
+    let precioB = parseInt(b.dataset.precio);
+
+    let vendidosA = parseInt(a.dataset.vendidos);
+    let vendidosB = parseInt(b.dataset.vendidos);
+
+    if (tipo === 'mayor') return precioB - precioA;
+    if (tipo === 'menor') return precioA - precioB;
+    if (tipo === 'vendidos') return vendidosB - vendidosA;
+
+  });
+
+  productos.forEach(p => contenedor.appendChild(p));
+}
+
+function buscarProducto() {
+  let input = document.getElementById("buscar").value.toLowerCase();
+  let productos = document.querySelectorAll(".producto");
+
+  productos.forEach(p => {
+    let texto = p.innerText.toLowerCase();
+
+    if (texto.includes(input)) {
+      p.style.display = "block";
+    } else {
+      p.style.display = "none";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
